@@ -102,7 +102,7 @@ function createFavicon (url) {
   return favicon
 }
 
-awaitSelector('#feedlyPageFX', '#root').then(pages => {
+awaitSelector('#feedlyPageHolderFX', '#root').then(pages => {
   waitAwaitSelector('a.EntryMetadataSource[href]', pages[0], sources => {
     sources
       .filter(source => source.querySelector('.gm-favicon') === null)
