@@ -94,7 +94,7 @@ function waitAwaitSelector (selector, root, callback) {
 
 function createFavicon (url) {
   // Decode Feedly subscription URL: i/subscription/feed/https%3A//www.example.com/rss/
-  const match = url.match(/\/feed\%2F(https%3A%2F%2F[^&]+)/);
+  const match = url.match(/\/feed\%2F(https?%3A%2F%2F[^&]+)/);
   let domain;
   if (match) {
     const decodedFeedUrl = decodeURIComponent(match[1]);
